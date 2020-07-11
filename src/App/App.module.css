@@ -1,0 +1,32 @@
+.wrap {
+  margin: auto;
+  width: 300px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  color: #3f51b5;
+}
+
+.list {
+  font-style: italic;
+}
+
+.footer {
+  font-weight: bold;
+}
+
+.done {
+  opacity: .8;
+  font-size: 80%;
+  text-decoration: line-through;
+}
+
+.add_task {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add_task > div {
+  margin-right: 20px;
+}
