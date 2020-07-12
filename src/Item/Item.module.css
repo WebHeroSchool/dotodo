@@ -8,25 +8,35 @@
   margin-right: 10px;
   cursor: pointer;
   position: relative;
+  transition: all .3s ease;
 }
 
 .content:hover {
-  color: grey;
-  font-size: 102%;
+  color: #fff;
+  background-color: #3f51b5;
+  padding: 3px 2px;
+}
+
+.content:active {
+  background-color: green;
 }
 
 .done:hover {
-  font-size: 83%;
+  font-size: 90%;
+}
+
+.done:active {
+  background-color: red;
 }
 
 .content:hover::after {
   content: 'отметить выполнение';
   color: green;
-  font-size: 8px;
+  font-size: 10px;
   position: absolute;
-  top: -10px;
+  top: -15px;
   right: -10px;
-  opacity: 1;
+  text-shadow: 0;
 }
 
 .done:hover::after {
@@ -34,6 +44,6 @@
   color: red;
   font-size: 10px;
   position: absolute;
-  top: -10px;
+  top: -15px;
   right: -10px;
 }
