@@ -14,7 +14,7 @@ button.delete {
   animation: opacityUnHover ease .5s;
   position: absolute;
   right: 10px;
-  top: calc( 50% - 14px);
+  top: calc(50% - 14px);
 }
 
 .delete:hover {

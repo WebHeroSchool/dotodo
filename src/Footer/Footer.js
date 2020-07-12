@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import ButtonInput from '../Button/Button.js'
+import ButtonInput from '../Button/Button.js';
 
 const Footer = ({ count }) => (
   <footer className={styles.footer}>
