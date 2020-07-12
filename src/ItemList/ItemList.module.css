@@ -28,7 +28,6 @@ ol {
 }
 
 @keyframes opacityHover {
-
   0% {
     opacity: .3;
   }
@@ -39,7 +38,6 @@ ol {
 }
 
 @keyframes opacityUnHover {
-
   0% {
     opacity: 1;
   }
