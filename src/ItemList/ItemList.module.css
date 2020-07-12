@@ -1,0 +1,50 @@
+.item {
+  position: relative;
+}
+
+.list {
+  font-style: italic;
+}
+
+button.delete {
+  background: url(../img/delete.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: .3;
+  animation: opacityUnHover ease .5s;
+  position: absolute;
+  right: 10px;
+  top: calc( 50% - 14px);
+}
+
+.delete:hover {
+  animation: opacityHover ease .5s;
+  opacity: 1;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+@keyframes opacityHover {
+
+  0% {
+    opacity: .3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityUnHover {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .3;
+  }
+}
