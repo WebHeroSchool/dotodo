@@ -42,9 +42,9 @@ class App extends React.Component {
       <ItemList todoItem={todoItem} />
       <Footer count={todoItem.filter(item => item.isDone === false).length} />
     </div>
-    )
+    );
 
-  };
+  }
 };
 
 export default App;
