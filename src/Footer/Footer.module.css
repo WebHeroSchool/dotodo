@@ -1,0 +1,17 @@
+.footer {
+  font-weight: bold;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.count {
+  color: #3f51b5;
+}
+
+.count span {
+  color: red;
+}

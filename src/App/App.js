@@ -2,6 +2,7 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
+import ButtonInput from '../Button/Button.js';
 import styles from './App.module.css';
 import '../fonts/fonts.css';
 
@@ -29,10 +30,16 @@ const App = () => (
     <h1 className={styles.title}>
       Список дел:
     </h1>
-    <InputItem />
+    <form action="">
+      <div className={styles.add_task}>
+        <InputItem />
+        <ButtonInput btnType='reset' ButtonText='Добавить' />
+      </div>
+    </form>
     <ItemList todoItem={todoItem} />
     <Footer count={todoItem.filter(item => item.isDone === false).length} />
-</div>
+  </div>
+
 );
 
 export default App;
