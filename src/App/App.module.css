@@ -5,6 +5,11 @@ body {
   animation: animate .3s linear infinite;
 }
 
+body:hover {
+  background: #fff !important;
+  animation-iteration-count: 1;
+}
+
 .wrap {
   margin: 0 auto;
   width: 340px;
@@ -12,6 +17,8 @@ body {
   background-color: #f7f7f7;
   padding: 10px;
   border-radius: 10px;
+  filter: invert();
+  opacity: .5;
 }
 
 .title {
@@ -40,8 +47,9 @@ input {
   animation-iteration-count: 1 !important;
 }
 
-body:hover {
-  background: #fff;
+.wrap:hover {
+  filter: none;
+  opacity: 1;
 }
 
 .wrap:hover * {
