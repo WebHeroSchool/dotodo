@@ -4,7 +4,7 @@ import styles from './Item.module.css';
 
 const Item = ({ value, isDone, onClickDone }) => (
   <span
-  onClick={() => onClickDone(isDone)}
+  onClick={() => onClickDone(value)}
   className={
     classnames({
       [styles.content]: true,

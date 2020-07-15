@@ -9,6 +9,12 @@
   cursor: pointer;
   position: relative;
   transition: all .2s linear;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .content:hover {
