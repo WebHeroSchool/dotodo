@@ -6,7 +6,7 @@ body {
 }
 
 body:hover {
-  background: #fff !important;
+  background: #f7f7f7 !important;
   animation-iteration-count: 1;
 }
 
@@ -18,7 +18,7 @@ body:hover {
   padding: 10px;
   border-radius: 10px;
   filter: invert();
-  opacity: .5;
+  opacity: .4;
 }
 
 .title {
