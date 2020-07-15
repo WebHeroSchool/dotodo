@@ -11,25 +11,39 @@ class App extends React.Component {
     items: [
       {
         value: 'открыть холодильник',
-        isDone: true
+        isDone: true,
+        id: 0,
       }, 
       {
         value: 'вытащить слона',
-        isDone: false
+        isDone: false,
+        id: 1,
       }, 
       {
         value: 'положить оленя',
-        isDone: false
+        isDone: false,
+        id: 2,
       }, 
       {
         value: 'закрыть холодильник',
-        isDone: false
-      }
+        isDone: false,
+        id: 3,
+      },
     ]
   };
 
-  onClickDone = isDone => {
-    console.log('Статус выполнения: ' + isDone);
+  onClickDone = id => {
+    const newItemList = this.state.items.map(item => {
+      const newItem = {...item};
+
+      if (item.id === id) {
+        newItem.isDone = !item.isDone;
+      }
+
+      return newItem;
+    });
+
+    this.setState({items: newItemList});
   };
 
   render () {
@@ -44,7 +58,7 @@ class App extends React.Component {
             <ButtonInput btnType='reset' ButtonText='Добавить' />
           </div>
         </form>
-        <ItemList todoItem={this.state.items} onClickDone={this.onClickDone} />
+        <ItemList todoItem={this.state.items} id={this.state.items.id} onClickDone={this.onClickDone} />
         <Footer count={this.state.items.filter(item => item.isDone === false).length} />
       </div>
     );

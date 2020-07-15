@@ -6,7 +6,7 @@ body {
 }
 
 body:hover {
-  background: #f7f7f7 !important;
+  background: #fff !important;
   animation-iteration-count: 1;
 }
 
