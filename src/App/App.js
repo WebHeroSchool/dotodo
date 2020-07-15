@@ -29,7 +29,7 @@ class App extends React.Component {
   };
 
   onClickDone = isDone => {
-    console.log('Статус выполнения: '+ isDone)
+    console.log('Статус выполнения: '+ isDone);
   };
 
   render () {
