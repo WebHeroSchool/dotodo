@@ -28,6 +28,10 @@ class App extends React.Component {
     ]
   };
 
+  onClickDone = isDone => {
+    console.log('Статус выполнения: ' + isDone);
+  };
+
   render () {
     return (
       <div className={styles.wrap}>
@@ -40,7 +44,7 @@ class App extends React.Component {
             <ButtonInput btnType='reset' ButtonText='Добавить' />
           </div>
         </form>
-        <ItemList todoItem={this.state.items} />
+        <ItemList todoItem={this.state.items} onClickDone={this.onClickDone} />
         <Footer count={this.state.items.filter(item => item.isDone === false).length} />
       </div>
     );
