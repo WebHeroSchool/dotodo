@@ -7,9 +7,8 @@ import styles from './App.module.css';
 import '../fonts/fonts.css';
 
 class App extends React.Component {
-
-  render () {
-    const todoItem = [
+  state = {
+    items: [
       {
         value: 'открыть холодильник',
         isDone: true
@@ -26,24 +25,25 @@ class App extends React.Component {
         value: 'закрыть холодильник',
         isDone: false
       }
-    ];
+    ]
+  };
 
-  return (
-    <div className={styles.wrap}>
-      <h1 className={styles.title}>
-        Список дел:
-      </h1>
-      <form action="">
-        <div className={styles.add_task}>
-          <InputItem />
-          <ButtonInput btnType='reset' ButtonText='Добавить' />
-        </div>
-      </form>
-      <ItemList todoItem={todoItem} />
-      <Footer count={todoItem.filter(item => item.isDone === false).length} />
-    </div>
+  render () {
+    return (
+      <div className={styles.wrap}>
+        <h1 className={styles.title}>
+          Список дел:
+        </h1>
+        <form action="">
+          <div className={styles.add_task}>
+            <InputItem />
+            <ButtonInput btnType='reset' ButtonText='Добавить' />
+          </div>
+        </form>
+        <ItemList todoItem={this.state.items} />
+        <Footer count={this.state.items.filter(item => item.isDone === false).length} />
+      </div>
     );
-
   }
 }
 
