@@ -4,17 +4,26 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import styles from './ItemList.module.css';
 
-const ItemList = ({ todoItem, onClickDone, isDone }) => (
+const ItemList = ({ todoItem, id, onClickDone, isDone }) => (
   <ol className={styles.list}>
     {
       todoItem.map(
         item =>
-          <li className={styles.item} key={item.value}>
-            <Checkbox color="primary" />
+          <li
+            className={styles.item}
+            key={item.value}
+          >
+            <Checkbox
+              color="primary"
+              checked={item.isDone}
+            />
             <Item className={styles.content}
               value={item.value}
               isDone={item.isDone}
-              onClickDone={onClickDone} />
+              onClickDone={onClickDone}
+              id={item.id}
+               />
+              
             <IconButton
               className={styles.delete}></IconButton>
           </li>
