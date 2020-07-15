@@ -12,22 +12,22 @@ class App extends React.Component {
       {
         value: 'открыть холодильник',
         isDone: true,
-        id: 0
+        id: 0,
       }, 
       {
         value: 'вытащить слона',
         isDone: false,
-        id: 1
+        id: 1,
       }, 
       {
         value: 'положить оленя',
         isDone: false,
-        id: 2
+        id: 2,
       }, 
       {
         value: 'закрыть холодильник',
         isDone: false,
-        id: 3
+        id: 3,
       },
     ]
   };
