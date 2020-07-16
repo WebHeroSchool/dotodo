@@ -46,6 +46,20 @@ class App extends React.Component {
     this.setState({items: newItemList});
   };
 
+  onClickDelete = id => {
+    this.setState(state => {
+      const newItemList = state.items;
+      newItemList.splice(id, 1);
+      newItemList.forEach(item => {
+
+        if (item.id >= id) {
+          item.id--;
+        }
+      });
+      return ({items: newItemList});
+    });
+  };
+
   render () {
     return (
       <div className={styles.wrap}>
@@ -58,7 +72,12 @@ class App extends React.Component {
             <ButtonInput btnType='reset' ButtonText='Добавить' />
           </div>
         </form>
-        <ItemList todoItem={this.state.items} id={this.state.items.id} onClickDone={this.onClickDone} />
+        <ItemList
+          todoItem={this.state.items}
+          id={this.state.items.id}
+          onClickDone={this.onClickDone}
+          onClickDelete={this.onClickDelete} 
+        />
         <Footer count={this.state.items.filter(item => item.isDone === false).length} />
       </div>
     );
