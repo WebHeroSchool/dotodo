@@ -4,7 +4,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import styles from './ItemList.module.css';
 
-const ItemList = ({ todoItem, id, onClickDone, onClickDelete, isDone }) => (
+const ItemList = ({ todoItem, index, onClickDone, onClickDelete, isDone }) => (
   <ol className={styles.list}>
     {
       todoItem.map(
@@ -21,13 +21,13 @@ const ItemList = ({ todoItem, id, onClickDone, onClickDelete, isDone }) => (
               value={item.value}
               isDone={item.isDone}
               onClickDone={onClickDone}
-              id={item.id}
+              index={item.index}
                />
               
             <IconButton
               className={styles.delete}
-              id={item.id}
-              onClick={() => onClickDelete(item.id)}
+              index={item.index}
+              onClick={() => onClickDelete(item.index)}
             >
             </IconButton>
           </li>
