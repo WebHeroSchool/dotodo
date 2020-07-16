@@ -12,31 +12,31 @@ class App extends React.Component {
       {
         value: 'открыть холодильник',
         isDone: true,
-        id: 0,
+        index: 0,
       }, 
       {
         value: 'вытащить слона',
         isDone: false,
-        id: 1,
+        index: 1,
       }, 
       {
         value: 'положить оленя',
         isDone: false,
-        id: 2,
+        index: 2,
       }, 
       {
         value: 'закрыть холодильник',
         isDone: false,
-        id: 3,
+        index: 3,
       },
     ]
   };
 
-  onClickDone = id => {
+  onClickDone = index => {
     const newItemList = this.state.items.map(item => {
       const newItem = {...item};
 
-      if (item.id === id) {
+      if (item.index === index) {
         newItem.isDone = !item.isDone;
       }
 
@@ -44,6 +44,20 @@ class App extends React.Component {
     });
 
     this.setState({items: newItemList});
+  };
+
+  onClickDelete = index => {
+    this.setState(state => {
+      const newItemList = state.items;
+      newItemList.splice(index, 1);
+      newItemList.forEach(item => {
+
+        if (item.index >= index) {
+          item.index--;
+        }
+      });
+      return ({items: newItemList});
+    });
   };
 
   render () {
@@ -58,7 +72,12 @@ class App extends React.Component {
             <ButtonInput btnType='reset' ButtonText='Добавить' />
           </div>
         </form>
-        <ItemList todoItem={this.state.items} id={this.state.items.id} onClickDone={this.onClickDone} />
+        <ItemList
+          todoItem={this.state.items}
+          index={this.state.items.index}
+          onClickDone={this.onClickDone}
+          onClickDelete={this.onClickDelete} 
+        />
         <Footer count={this.state.items.filter(item => item.isDone === false).length} />
       </div>
     );

@@ -2,9 +2,9 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './Item.module.css';
 
-const Item = ({ value, id, isDone, onClickDone }) => (
+const Item = ({ value, index, isDone, onClickDone }) => (
   <span
-  onClick={() => onClickDone(id)}
+  onClick={() => onClickDone(index)}
   className={
     classnames({
       [styles.content]: true,
