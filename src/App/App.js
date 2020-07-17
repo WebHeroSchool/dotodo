@@ -77,7 +77,7 @@ class App extends React.Component {
     }));
   };
 
-  selectedDelete = () => this.setState((state) => ({ items: state.items.filter(item => item.isDone !== true)}))
+  selectedDelete = () => this.setState(state => ({ items: state.items.filter(item => item.isDone !== true)}))
 
   render () {
     return (
