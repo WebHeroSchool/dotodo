@@ -1,18 +1,46 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import ButtonInput from '../Button/Button.js';
+import Button from '@material-ui/core/Button';
 
-const Footer = ({ count }) => (
+const Footer = ({ count, selectedDelete }) => (
   <footer className={styles.footer}>
       <div className={styles.filter}>
-      <ButtonInput btnType='button' ButtonText='активные' />
-      <ButtonInput btnType='button' ButtonText='выполненные' />
-      <ButtonInput btnType='button' ButtonText='все' />
+
+      <Button
+        variant="contained"
+        color="primary"
+      >
+        активные
+      </Button>
+
+      <Button
+        variant="contained"
+        color="primary"
+      >
+        выполненные
+      </Button>
+
+      <Button
+        variant="contained"
+        color="primary"
+      >
+        все
+      </Button>
     </div>
-    <ButtonInput btnType='button' ButtonText='удалить выбранное' />
+
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={() => selectedDelete(true)}
+    >
+      Удалить выполненные
+    </Button>
+
     <p className={styles.count}>
-      осталось дел: 
-        <span> { count }</span>
+      осталось дел:
+      <span>
+        {' ' + count }
+      </span>
     </p>
   </footer>
 );

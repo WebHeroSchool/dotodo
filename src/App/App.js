@@ -2,7 +2,6 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
-import ButtonInput from '../Button/Button.js';
 import styles from './App.module.css';
 import '../fonts/fonts.css';
 
@@ -60,25 +59,42 @@ class App extends React.Component {
     });
   };
 
+  onClickAdd = value => {
+
+    if (value.length > 30) {
+      value = value.slice(0,30) + '...';
+    }
+
+    this.setState(state => ({
+      items: [
+        ...state.items,
+        {
+          value,
+          isDone: false,
+          index: this.state.items.length,
+        }
+      ]
+    }));
+  };
+
+  selectedDelete = () => this.setState((state) => ({ items: state.items.filter(item => item.isDone !== true)}))
+
   render () {
     return (
       <div className={styles.wrap}>
         <h1 className={styles.title}>
           Список дел:
         </h1>
-        <form action="">
-          <div className={styles.add_task}>
-            <InputItem />
-            <ButtonInput btnType='reset' ButtonText='Добавить' />
-          </div>
-        </form>
+        <InputItem onClickAdd={this.onClickAdd} />
         <ItemList
           todoItem={this.state.items}
           index={this.state.items.index}
           onClickDone={this.onClickDone}
           onClickDelete={this.onClickDelete} 
         />
-        <Footer count={this.state.items.filter(item => item.isDone === false).length} />
+        <Footer
+          selectedDelete={this.selectedDelete}
+          count={this.state.items.filter(item => item.isDone === false).length} />
       </div>
     );
   }
