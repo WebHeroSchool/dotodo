@@ -45,4 +45,8 @@ const Footer = ({ count, selectedDelete }) => (
   </footer>
 );
 
+Footer.defaultProps = {
+  count: 'значение по умолчанию'
+};
+
 export default Footer;
