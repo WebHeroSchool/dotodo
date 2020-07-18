@@ -11,11 +11,12 @@ const ItemList = ({ todoItem, index, onClickDone, onClickDelete, isDone }) => (
         item =>
           <li
             className={styles.item}
-            key={item.value}
+            key={item.index}
           >
             <Checkbox
               color="primary"
               checked={item.isDone}
+              onClick={() => onClickDone(item.index)}
             />
             <Item className={styles.content}
               value={item.value}

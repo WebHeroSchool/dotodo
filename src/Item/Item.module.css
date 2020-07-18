@@ -42,8 +42,9 @@
   font-size: 10px;
   position: absolute;
   top: -15px;
-  right: -10px;
+  left: 30px;
   text-shadow: 0;
+  min-width: 114px;
 }
 
 .done:hover::after {
@@ -52,5 +53,6 @@
   font-size: 10px;
   position: absolute;
   top: -15px;
-  right: -10px;
+  left: 30px;
+  min-width: 114px;
 }
