@@ -48,7 +48,7 @@ class InputItem extends React.Component {
       </div>
     );
   }
-};
+}
 
 InputItem.propTypes = {
   onClickAdd: PropTypes.func

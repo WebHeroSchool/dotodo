@@ -49,6 +49,6 @@ const Footer = ({ count, selectedDelete }) => (
 Footer.propTypes = {
   count: PropTypes.number.isRequired,
   selectedDelete: PropTypes.func
-}
+};
 
 export default Footer;
