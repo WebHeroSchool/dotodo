@@ -3,8 +3,9 @@ import Item from '../Item/Item';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import styles from './ItemList.module.css';
+import PropTypes from 'prop-types';
 
-const ItemList = ({ todoItem, index, onClickDone, onClickDelete, isDone }) => (
+const ItemList = ({ todoItem, onClickDone, onClickDelete, isDone }) => (
   <ol className={styles.list}>
     {
       todoItem.map(
@@ -36,5 +37,11 @@ const ItemList = ({ todoItem, index, onClickDone, onClickDelete, isDone }) => (
     }
   </ol>
 );
+
+ItemList.propTypes = {
+  index: PropTypes.number,
+  isDone: PropTypes.bool,
+  value: PropTypes.string
+};
 
 export default ItemList;

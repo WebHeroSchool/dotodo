@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
 import styles from './App.module.css';
 import '../fonts/fonts.css';
+import PropTypes from 'prop-types';
 
 class App extends React.Component {
   state = {
@@ -87,17 +88,21 @@ class App extends React.Component {
         </h1>
         <InputItem onClickAdd={this.onClickAdd} />
         <ItemList
-           todoItem={this.state.items} 
-          index={this.state.items.index}
+          todoItem={this.state.items} 
           onClickDone={this.onClickDone}
           onClickDelete={this.onClickDelete} 
         />
         <Footer
           selectedDelete={this.selectedDelete}
-        /> 
+          count={this.state.items.filter(item => item.isDone === false).length}  /> 
       </div>
     );
   }
-}
+};
+
+App.propTypes = {
+  index: PropTypes.number,
+  value: PropTypes.string
+};
 
 export default App;
