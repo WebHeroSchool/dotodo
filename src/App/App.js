@@ -87,14 +87,14 @@ class App extends React.Component {
         </h1>
         <InputItem onClickAdd={this.onClickAdd} />
         <ItemList
-          todoItem={this.state.items}
+           todoItem={this.state.items} 
           index={this.state.items.index}
           onClickDone={this.onClickDone}
           onClickDelete={this.onClickDelete} 
         />
         <Footer
           selectedDelete={this.selectedDelete}
-          count={this.state.items.filter(item => item.isDone === false).length} />
+        /> 
       </div>
     );
   }

@@ -15,4 +15,8 @@ const Item = ({ value, index, isDone, onClickDone }) => (
   </span>
 );
 
+Item.defaultProps = {
+  isDone: false
+};
+
 export default Item;
