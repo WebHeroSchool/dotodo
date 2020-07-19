@@ -7,6 +7,7 @@ import '../fonts/fonts.css';
 import PropTypes from 'prop-types';
 
 class App extends React.Component {
+
   state = {
     items: [
       {
@@ -94,7 +95,7 @@ class App extends React.Component {
         />
         <Footer
           selectedDelete={this.selectedDelete}
-          count={this.state.items.filter(item => item.isDone === false).length}  /> 
+          count={this.state.items.filter(item => item.isDone === false).length} /> 
       </div>
     );
   }
