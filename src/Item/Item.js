@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 class Item extends React.Component {
   componentDidMount() {
-    this.timer = setInterval(() => console.log('timer'), 1000)
+    this.timer = setInterval(() => console.log('timer'), 1000);
   }
 
   componentWillUnmount() {
