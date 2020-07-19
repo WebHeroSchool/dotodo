@@ -5,24 +5,24 @@ import PropTypes from 'prop-types';
 
 class Item extends React.Component {
   componentDidMount() {
-    console.log('componentDidMount')
-  };
+    console.log('componentDidMount');
+  }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount')
-  };
+    console.log('componentWillUnmount');
+  }
 
   compomentDidUpdate() {
-    console.log('compomentDidUpdate')
-  };
+    console.log('compomentDidUpdate');
+  }
 
   shouldComponentUpdate() {
-    console.log('shouldComponentUpdate')
-  };
+    console.log('shouldComponentUpdate');
+  }
 
   static getDerivedStateFromProps() {
-    console.log('getDerivedStateFromProps')
-  };
+    console.log('getDerivedStateFromProps');
+  }
 
   render() {
     const { value, index, isDone, onClickDone } = this.props;
