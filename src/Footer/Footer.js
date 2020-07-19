@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types';
 
 const Footer = ({ count, selectedDelete }) => (
   <footer className={styles.footer}>
@@ -45,8 +46,9 @@ const Footer = ({ count, selectedDelete }) => (
   </footer>
 );
 
-Footer.defaultProps = {
-  count: 'значение по умолчанию'
+Footer.propTypes = {
+  count: PropTypes.number.isRequired,
+  selectedDelete: PropTypes.func
 };
 
 export default Footer;

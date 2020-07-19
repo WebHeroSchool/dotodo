@@ -1,5 +1,6 @@
 import Button from '@material-ui/core/Button';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ButtonInput = ({ButtonText}) => (
   <Button
@@ -9,5 +10,9 @@ const ButtonInput = ({ButtonText}) => (
     {ButtonText}
   </Button>
 );
+
+Button.propTypes = {
+  ButtonText: PropTypes.string,
+};
 
 export default ButtonInput;
