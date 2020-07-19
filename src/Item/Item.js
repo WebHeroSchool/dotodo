@@ -5,23 +5,11 @@ import PropTypes from 'prop-types';
 
 class Item extends React.Component {
   componentDidMount() {
-    console.log('componentDidMount');
+    this.timer = setInterval(() => console.log('timer'), 1000)
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount');
-  }
-
-  compomentDidUpdate() {
-    console.log('compomentDidUpdate');
-  }
-
-  shouldComponentUpdate() {
-    console.log('shouldComponentUpdate');
-  }
-
-  static getDerivedStateFromProps() {
-    console.log('getDerivedStateFromProps');
+    clearInterval(this.timer);
   }
 
   render() {
