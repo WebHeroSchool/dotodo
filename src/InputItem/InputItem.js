@@ -5,6 +5,7 @@ import styles from './InputItem.module.css';
 import PropTypes from 'prop-types';
 
 class InputItem extends React.Component {
+  
   state = {
     inputValue: '',
     inputLabel: 'Новая задача'
