@@ -49,13 +49,13 @@ const App = () => {
   };
 
   const onClickDelete = index => {
-    setItems(item =>(items.filter(item => item.index !== index)))
+    setItems(item => (items.filter(item => item.index !== index)));
     items.forEach(item => {
 
       if (item.index > index) {
         item.index--;
       }
-    })
+    });
   };
 
   const onClickAdd = value => {
