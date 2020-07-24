@@ -33,6 +33,9 @@ const App = () => {
   };
   
   const [items, setItems] = useState(initialState.items);
+  useEffect(() => {
+    console.log('mount');
+  }, []);
   useEffect(() => console.log('update'))
   const onClickDone = index => {
     const newItemList = items.map(item => {
