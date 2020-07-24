@@ -36,7 +36,7 @@ const App = () => {
   useEffect(() => {
     console.log('mount');
   }, []);
-  useEffect(() => console.log('update'))
+  useEffect(() => console.log('update'));
   const onClickDone = index => {
     const newItemList = items.map(item => {
       const newItem = {...item};
@@ -112,8 +112,7 @@ const App = () => {
         /> 
     </div>
   );
-
-}
+};
 
 export default App;
 
