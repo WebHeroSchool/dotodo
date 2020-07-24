@@ -121,4 +121,4 @@ App.propTypes = {
   value: PropTypes.string,
   isDone: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.object)
-}
+};
