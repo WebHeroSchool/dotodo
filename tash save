@@ -1,0 +1,352 @@
+[33mcommit bec1d4eebcd879947620c2a47122dd9550f99837[m[33m ([m[1;36mHEAD -> [m[1;32mhooks[m[33m, [m[1;31morigin/task36[m[33m, [m[1;32mtask36[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sun Jul 19 19:03:12 2020 +0400
+
+    commit
+
+[33mcommit a392efdc437dc2fe4206c54dc8229f49c4b4b1d5[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sun Jul 19 19:00:21 2020 +0400
+
+    commit
+
+[33mcommit 8aedd008718626d65eb3a8fc8182296ee84b1363[m[33m ([m[1;31morigin/task35[m[33m, [m[1;32mtask35[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sun Jul 19 18:10:14 2020 +0400
+
+    add lifecycle methods _codacy
+
+[33mcommit 9773853b5dbd8c28918f82a93018972457be5c7c[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sun Jul 19 18:06:10 2020 +0400
+
+    add lifecycle methods
+
+[33mcommit 5ae29c94b2e14d66822abd55be04f199986ba4ea[m[33m ([m[1;31morigin/propstyps[m[33m, [m[1;32mpropstyps[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sat Jul 18 18:47:18 2020 +0400
+
+    add props types_codacy
+
+[33mcommit b0bba529b3d7584973a3e54bb48731b86d5b6809[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sat Jul 18 18:43:56 2020 +0400
+
+    add props types
+
+[33mcommit 73d1eb3621151c893aa054709a90a0fe9977ed1a[m[33m ([m[1;31morigin/defprops[m[33m, [m[1;32mdefprops[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sat Jul 18 18:10:55 2020 +0400
+
+    default props
+
+[33mcommit 9f51e821922d2d4685588324a6328797cb63e89c[m[33m ([m[1;31morigin/addElement[m[33m, [m[1;32maddElement[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Fri Jul 17 22:10:17 2020 +0400
+
+    add elements codacy
+
+[33mcommit 5eab978606e3c22f4bc6d746697131b413ab3d82[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Fri Jul 17 19:29:44 2020 +0400
+
+    add elements
+
+[33mcommit ff31f41e989bb144019fd87f324102fd807e09b9[m[33m ([m[1;31morigin/transferring[m[33m, [m[1;32mtransferring[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Thu Jul 16 20:57:42 2020 +0400
+
+    add index el
+
+[33mcommit 603dc2c5a4e40858fdfb215b0e9cba21ca0eedac[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Thu Jul 16 12:13:35 2020 +0400
+
+    transfer
+
+[33mcommit 89c8341d70bf46cdbdf413567d13129b8196109a[m
+Merge: bd57340 9c9674a
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Thu Jul 16 09:58:49 2020 +0400
+
+    Merge branch 'setstate_fix' of github.com:WebHeroSchool/dotodo into transferring
+
+[33mcommit 9c9674a8e39b7336422fca9c6e164f8fe54b83c3[m[33m ([m[1;31morigin/setstate_fix[m[33m)[m
+Author: Dmitry <45824256+tytytyw@users.noreply.github.com>
+Date:   Wed Jul 15 20:26:34 2020 +0400
+
+    Readme
+
+[33mcommit 5a18742bd5fa2c5e50eb984851fa414ba2ff4451[m
+Author: Dmitry <45824256+tytytyw@users.noreply.github.com>
+Date:   Wed Jul 15 20:23:49 2020 +0400
+
+    Update README.md
+
+[33mcommit fb1cfea4e805e7c8846fce96f0a17f1fab90d5d8[m
+Author: Dmitry <45824256+tytytyw@users.noreply.github.com>
+Date:   Wed Jul 15 20:23:39 2020 +0400
+
+    Update README.md
+
+[33mcommit 8b381ae3f62953dcadcf49b5edf1ce95726b874d[m
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Wed Jul 15 19:13:32 2020 +0300
+
+    Update README.md
+
+[33mcommit d6432cce6f07d0abc64273756434ec0e050eef33[m[33m ([m[1;31morigin/setState[m[33m, [m[1;32msetstate_fix[m[33m, [m[1;32msetState[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 19:20:28 2020 +0400
+
+    setstate_fix
+
+[33mcommit 72fa7ddf11c12ebfbb2a43ec080196a04bff9845[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 19:17:44 2020 +0400
+
+    setstate fix
+
+[33mcommit 24544fac57de6d784f29fe0584629c35b06487c2[m
+Merge: 68af5d6 5ca30a3
+Author: Dmitry <45824256+tytytyw@users.noreply.github.com>
+Date:   Wed Jul 15 18:17:06 2020 +0400
+
+    Merge branch 'master' into setState
+
+[33mcommit 5ca30a3d0dd5c9f2c7295dc5d415ef9104822bce[m
+Merge: 1959d00 2eb1379
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Wed Jul 15 15:54:03 2020 +0300
+
+    Merge pull request #7 from WebHeroSchool/event
+    
+    Event
+
+[33mcommit 1959d00ab00e29228f2b1bf4b64341f876a3f70f[m
+Merge: 90ca6a8 85fd1e8
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Wed Jul 15 14:41:31 2020 +0300
+
+    Merge pull request #6 from WebHeroSchool/state
+    
+    State
+
+[33mcommit 68af5d6a8c6f0b6e41908962f894e4321b594475[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 15:32:45 2020 +0400
+
+    bg color
+
+[33mcommit bd57340df9d7599cbd53abe2d96d748da88f2e08[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 15:30:40 2020 +0400
+
+    commit
+
+[33mcommit 2eb13796dd1d18c93bbbe2b752fe9bb851b9507f[m[33m ([m[1;31morigin/event[m[33m, [m[1;32mevent[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 15:16:46 2020 +0400
+
+    event codacy
+
+[33mcommit f02613a16ccf09724fac0313d9363ba64fb6bcff[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 15:11:23 2020 +0400
+
+    change isDone on click - codacy
+
+[33mcommit 756c599e31716f5152a6c918afc0002a147e79ec[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 15:07:27 2020 +0400
+
+    change isDone on click
+
+[33mcommit 40a9760e816d6161fe25db2474cea7f7a7785314[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 14:18:16 2020 +0400
+
+    event codacy
+
+[33mcommit 844b5b0f2cff6b74257f780f098820ac7d67cf7f[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 14:13:04 2020 +0400
+
+    console.log isDone status
+
+[33mcommit 85fd1e85136a9a37e7c19c94357fd917b951db81[m[33m ([m[1;31morigin/state[m[33m, [m[1;32mstate[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 12:43:04 2020 +0400
+
+    state
+
+[33mcommit 3f58f4ef7016e346a3ead7bde1d27930481b9ba8[m[33m ([m[1;31morigin/refactoring[m[33m, [m[1;32mrefactoring[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Wed Jul 15 12:31:00 2020 +0400
+
+    surprise
+
+[33mcommit 92ce7bf8d9345f30b737194ca2434de09cfae38f[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 20:56:45 2020 +0400
+
+    surprise
+
+[33mcommit 90ca6a89585c435b04a466d211e1bf286259366d[m
+Merge: c4c12aa 7974f50
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Mon Jul 13 15:43:39 2020 +0300
+
+    Merge pull request #5 from WebHeroSchool/refactoring
+    
+    Refactoring
+
+[33mcommit c4c12aa1851a486dd2f006adc2cf4709075f7e8c[m
+Merge: 214b983 3352e59
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Mon Jul 13 15:34:21 2020 +0300
+
+    Merge pull request #4 from WebHeroSchool/styleApp
+    
+    styleApp
+
+[33mcommit 7974f5044cb6a2c60c4cd7dc9d458d7ab9afd612[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 15:47:49 2020 +0400
+
+    surprise
+
+[33mcommit 009b0fd3987e926c3fad77d6f5867f39b15e2997[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 15:43:37 2020 +0400
+
+    surprise
+
+[33mcommit b399e35f7269324209cbd658a2db59f9c7ec24f6[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 15:40:19 2020 +0400
+
+    surprise
+
+[33mcommit ef3292be4226e7b19d4ee570010d7de6c0f46c3a[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 15:36:16 2020 +0400
+
+    surprise
+
+[33mcommit 5b1303bbd1c89508b7cf8fd87aeea7e8d933c7d3[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 15:33:26 2020 +0400
+
+    surprise
+
+[33mcommit c876fcd57bef6ae7b7aa5add10b17a81ee6827cb[m
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Mon Jul 13 11:29:17 2020 +0300
+
+    Update App.js
+
+[33mcommit 308a4f7444ee3329d209a1dfc98849df34317c6b[m
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Mon Jul 13 11:28:02 2020 +0300
+
+    Update App.js
+
+[33mcommit bcd3630ec3a15cc7c07b8e88f0b7f8c05e10ce10[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 12:16:28 2020 +0400
+
+    refactoring App.js codacy
+
+[33mcommit 005e9f333aa05b0db5221bf0b7545209e6857d15[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 11:28:23 2020 +0400
+
+    refactoring App.js edit hover
+
+[33mcommit 0522a22eefc44045ee50800604033f6a9c41b30d[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 10:38:17 2020 +0400
+
+    refactoring App.js codacy
+
+[33mcommit 0233a9a686ec2695cb365a2c573448d056c2fe16[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Mon Jul 13 10:34:16 2020 +0400
+
+    refactoring App.js
+
+[33mcommit 3352e594523dfd4daf036ac42b0706d234009f94[m[33m ([m[1;31morigin/styleApp[m[33m, [m[1;32mstyleApp[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sun Jul 12 22:10:22 2020 +0400
+
+    styleApp add transition
+
+[33mcommit d415eb42f481e19c92f67577e844657553826904[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sun Jul 12 18:42:27 2020 +0400
+
+    styleApp codacy
+
+[33mcommit 0f59af5fd0dc47aefb6ee1690752d30b59dedb88[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sun Jul 12 18:39:40 2020 +0400
+
+    styleApp codacy
+
+[33mcommit 30d230ae86fd78dea9a2f60df4b4e9fb4c6ef3d5[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sun Jul 12 18:33:43 2020 +0400
+
+    styleApp
+
+[33mcommit 214b98398af5f2dbcce116c55543b6714f926c73[m
+Merge: 1b0cb77 9f92978
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Sat Jul 11 22:38:09 2020 +0300
+
+    Merge pull request #3 from WebHeroSchool/UI
+    
+    Ui
+
+[33mcommit 1b0cb77666cf285e5a6565a100032bd7ce97d47a[m
+Merge: 4dd4376 a265990
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Sat Jul 11 22:32:56 2020 +0300
+
+    Merge pull request #2 from WebHeroSchool/classname
+    
+    Classname
+
+[33mcommit 4dd4376c6a1b9db8f216b73ceefedd7fa8087f73[m
+Merge: efb15aa 017ec1f
+Author: Kseniya Burnashova <46670279+KsuBurn@users.noreply.github.com>
+Date:   Sat Jul 11 22:26:38 2020 +0300
+
+    Merge pull request #1 from WebHeroSchool/slave
+    
+    commit
+
+[33mcommit 9f92978a0a8a495098f0660c0d1d71a6c02481be[m[33m ([m[1;31morigin/UI[m[33m, [m[1;32mUI[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sat Jul 11 22:49:42 2020 +0400
+
+    ui
+
+[33mcommit a265990e5e6543b5cb5f968d5be09489a54811e1[m[33m ([m[1;31morigin/classname[m[33m, [m[1;32mclassname[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sat Jul 11 22:47:19 2020 +0400
+
+    classname
+
+[33mcommit 017ec1f0ecf9ec8718d21e9e0264f727b848fcaf[m[33m ([m[1;31morigin/slave[m[33m, [m[1;32mslave[m[33m)[m
+Author: Dmitriy_Kolesnikov <nonameFOX@yandex.ru>
+Date:   Sat Jul 11 22:44:07 2020 +0400
+
+    commit
+
+[33mcommit efb15aaff149f527454663bf541ef226c4c0bc21[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Dmitry <45824256+tytytyw@users.noreply.github.com>
+Date:   Sat Jul 11 22:32:31 2020 +0400
+
+    Initial commit
