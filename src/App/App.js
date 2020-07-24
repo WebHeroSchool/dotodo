@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
@@ -33,7 +33,7 @@ const App = () => {
   };
   
   const [items, setItems] = useState(initialState.items);
-
+  useEffect(() => console.log('update'))
   const onClickDone = index => {
     const newItemList = items.map(item => {
       const newItem = {...item};
