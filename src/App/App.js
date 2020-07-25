@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
@@ -6,9 +6,8 @@ import styles from './App.module.css';
 import '../fonts/fonts.css';
 import PropTypes from 'prop-types';
 
-class App extends React.Component {
-
-  state = {
+const App = () => {
+  const initialState = {
     items: [
       {
         value: 'открыть холодильник',
@@ -32,9 +31,14 @@ class App extends React.Component {
       },
     ]
   };
-
-  onClickDone = index => {
-    const newItemList = this.state.items.map(item => {
+  
+  const [items, setItems] = useState(initialState.items);
+  useEffect(() => {
+    console.log('mount');
+  }, []);
+  useEffect(() => console.log('update'));
+  const onClickDone = index => {
+    const newItemList = items.map(item => {
       const newItem = {...item};
 
       if (item.index === index) {
@@ -44,66 +48,77 @@ class App extends React.Component {
       return newItem;
     });
 
-    this.setState({items: newItemList});
+    setItems(newItemList);
   };
 
-  onClickDelete = index => {
-    this.setState(state => {
-      const newItemList = state.items;
-      newItemList.splice(index, 1);
-      newItemList.forEach(item => {
+  const onClickDelete = index => {
+    setItems(item => (items.filter(item => item.index !== index)));
+    items.forEach(item => {
 
-        if (item.index >= index) {
-          item.index--;
-        }
-      });
-      return ({items: newItemList});
+      if (item.index > index) {
+        item.index--;
+      }
     });
   };
 
-  onClickAdd = value => {
+  const onClickAdd = value => {
 
     if (value.length > 30) {
       value = value.slice(0,30) + '...';
     }
 
-    this.setState(state => ({
-      items: [
-        ...state.items,
+    setItems(items => ([
+        ...items,
         {
           value,
           isDone: false,
-          index: this.state.items.length,
+          index: items.length,
         }
       ]
-    }));
+    ));
   };
 
-  selectedDelete = () => this.setState(state => ({ items: state.items.filter(item => item.isDone !== true)}))
+  const selectedDelete = () => {
+    let count = 0;
+    items.forEach(item => {
+      
+      if (item.isDone === true) {
+        count = count + 1;
+      }
+      item.index = item.index - count ;
+    });
+    setItems(items => (items.filter(item => item.isDone !== true)));
+  };
 
-  render () {
-    return (
-      <div className={styles.wrap}>
-        <h1 className={styles.title}>
-          Список дел:
-        </h1>
-        <InputItem onClickAdd={this.onClickAdd} />
-        <ItemList
-          todoItem={this.state.items} 
-          onClickDone={this.onClickDone}
-          onClickDelete={this.onClickDelete} 
-        />
-        <Footer
-          selectedDelete={this.selectedDelete}
-          count={this.state.items.filter(item => item.isDone === false).length} /> 
-      </div>
-    );
-  }
-}
+  const onClickFilter = () => {
+  };
 
-App.propTypes = {
-  index: PropTypes.number,
-  value: PropTypes.string
+  return (
+    <div className={styles.wrap}>
+      <h1 className={styles.title}>
+        Список дел:
+      </h1>
+      <InputItem onClickAdd={onClickAdd} />
+      <ItemList
+        todoItem={items}
+        onClickDone={onClickDone}
+        onClickDelete={onClickDelete} 
+      />
+      <Footer
+        onClickFilter={onClickFilter}
+        selectedDelete={selectedDelete}
+        count={items.filter(item => item.isDone === false).length} 
+        countAll={items.length}
+        /> 
+    </div>
+  );
 };
 
 export default App;
+
+App.propTypes = {
+  index: PropTypes.number,
+  value: PropTypes.string,
+  isDone: PropTypes.bool,
+  items: PropTypes.arrayOf(PropTypes.object)
+};

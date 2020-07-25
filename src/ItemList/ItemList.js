@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 class ItemList extends React.Component {
 
   render () {
-  const { todoItem, onClickDone, onClickDelete, isDone } = this.props;
+  const { todoItem, onClickDone, onClickDelete } = this.props;
 
     return (
     <ol className={styles.list}>
@@ -26,11 +26,10 @@ class ItemList extends React.Component {
               />
               <Item className={styles.content}
                 value={item.value}
-                isDone={item.isDone}
                 onClickDone={onClickDone}
                 index={item.index}
-                 />
-                
+                isDone={item.isDone}
+              />
               <IconButton
                 className={styles.delete}
                 index={item.index}
