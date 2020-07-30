@@ -6,7 +6,7 @@ body {
 
 a {
   text-decoration: none;
-  }
+}
 
 .wraper {
   display: flex;
@@ -42,7 +42,6 @@ a {
   transition: ease .3s;
   margin-bottom: 10px;
   color: #3f51b5;
-
 }
 
 .item:hover {

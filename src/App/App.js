@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Todo from '../Todo/Todo.js';
 import About from '../About/About.js';
@@ -23,6 +23,7 @@ const App = () => {
         </div>
       </div>
       </Router>
-)};
+  );
+}
 
 export default App;
