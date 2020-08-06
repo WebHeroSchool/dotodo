@@ -9,7 +9,7 @@ class About extends React.Component {
   state = {
     isLoading: true,
     isError: false,
-    error: ",
+    error: "",
     repoList: [],
     info: []
   }
