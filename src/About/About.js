@@ -23,12 +23,12 @@ class About extends React.Component {
         isLoading: false
       });
     })
-    .catch( error => {
+    .catch( (error) => {
       this.setState({
         isLoading: false,
         isError: true,
         error: error.message
-      })
+      });
     })
 
    octokit.users.getByUsername({
@@ -71,7 +71,7 @@ class About extends React.Component {
             <div className={styles.title}>
               Мои репозитрии:
               <ol className={styles.repo_list}>
-                {repoList.map( repo => (
+                {repoList.map( (repo) => (
                 <li key={repo.id}>
                   <a
                   className={styles.link}
