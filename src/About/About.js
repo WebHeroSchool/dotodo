@@ -1,7 +1,7 @@
-import React from 'react';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import styles from './About.module.css';
-import { Octokit } from '@octokit/rest';
+import React from "react";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import styles from "./About.module.css";
+import { Octokit } from "@octokit/rest";
 
 const octokit = new Octokit();
 
@@ -9,30 +9,30 @@ class About extends React.Component {
   state = {
     isLoading: true,
     isError: false,
-    error: '',
+    error: ",
     repoList: [],
     info: []
   }
 
   componentDidMount() {
     octokit.repos.listForUser({
-      username: 'tytytyw'
+      username: "tytytyw"
     }).then(({ data }) => {
       this.setState({
         repoList: data,
         isLoading: false
-      })
+      });
     })
-    .catch(error => {
+    .catch( error => {
       this.setState({
         isLoading: false,
         isError: true,
         error: error.message
       })
     })
-    
+
    octokit.users.getByUsername({
-      username: 'tytytyw'
+      username: "tytytyw"
         }).then(({ data }) => {
           this.setState({
             info: data,
@@ -45,7 +45,7 @@ class About extends React.Component {
         error: error.message
       })
     })
-  };
+  }
 
   render() {
     const { isLoading, isError, error, repoList, info } = this.state;
@@ -55,7 +55,7 @@ class About extends React.Component {
 
           {!isLoading && !isError &&
             <div className={styles.bio}>
-              <img src={info.avatar_url} alt='avatar GitHub'></img>
+              <img src={info.avatar_url} alt="avatar GitHub"></img>
               <h4 className={styles.content}>
                 <div>
                   name: {info.name}
@@ -71,7 +71,7 @@ class About extends React.Component {
             <div className={styles.title}>
               Мои репозитрии:
               <ol className={styles.repo_list}>
-                {repoList.map(repo => (
+                {repoList.map( repo => (
                 <li key={repo.id}>
                   <a
                   className={styles.link}
