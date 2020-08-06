@@ -29,7 +29,7 @@ class About extends React.Component {
         isError: true,
         error: error.message
       });
-    })
+    });
 
    octokit.users.getByUsername({
       username: "tytytyw"
@@ -38,7 +38,7 @@ class About extends React.Component {
             info: data,
         });
     })
-    .catch(error => {
+    .catch( (error) => {
       this.setState({
         bioIsLoading: false,
         isError: true,
