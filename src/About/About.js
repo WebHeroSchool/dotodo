@@ -43,7 +43,7 @@ class About extends React.Component {
         bioIsLoading: false,
         isError: true,
         error: error.message
-      })
+      });
     })
   }
 
