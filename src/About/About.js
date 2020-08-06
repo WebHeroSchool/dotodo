@@ -44,7 +44,7 @@ class About extends React.Component {
         isError: true,
         error: error.message
       });
-    })
+    });
   }
 
   render() {
