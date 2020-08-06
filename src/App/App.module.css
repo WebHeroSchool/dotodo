@@ -15,7 +15,7 @@ a {
 
 .content {
   width: 400px;
-  min-height: 500px;
+  min-height: 660px;
   font-family: 'Montserrat', sans-serif;
   background-color: #f7f7f7;
   padding: 10px;
@@ -31,7 +31,8 @@ a {
   margin-right: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 2em;
 }
 
 .item {
