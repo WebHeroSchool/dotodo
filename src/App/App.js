@@ -7,6 +7,30 @@ import styles from './App.module.css';
 import '../fonts/fonts.css';
 
 const App = () => {
+  const state = {
+    items: [
+      {
+        value: 'открыть холодильник',
+        isDone: true,
+        index: 0,
+      }, 
+      {
+        value: 'вытащить слона',
+        isDone: false,
+        index: 1,
+      }, 
+      {
+        value: 'положить оленя',
+        isDone: false,
+        index: 2,
+      }, 
+      {
+        value: 'закрыть холодильник',
+        isDone: false,
+        index: 3,
+      },
+    ],
+  };
 
   return (
     <Router>

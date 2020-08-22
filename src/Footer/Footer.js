@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 
-const Footer = ({ count, selectedDelete }) => (
+const Footer = ({ count, selectedDelete, onClickFilter }) => (
 
   <footer className={styles.footer}>
       <div className={styles.filter}>
@@ -11,6 +11,7 @@ const Footer = ({ count, selectedDelete }) => (
       <Button
         variant="contained"
         color="primary"
+        onClick={() => onClickFilter('active')}
       >
         активные
       </Button>
@@ -18,6 +19,7 @@ const Footer = ({ count, selectedDelete }) => (
       <Button
         variant="contained"
         color="primary"
+        onClick={() => onClickFilter('done')}
       >
         выполненные
       </Button>
@@ -25,6 +27,7 @@ const Footer = ({ count, selectedDelete }) => (
       <Button
         variant="contained"
         color="primary"
+        onClick={() => onClickFilter('all')}
       >
         все
       </Button>

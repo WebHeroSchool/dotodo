@@ -20,7 +20,6 @@ class InputItem extends React.Component {
     this.setState({inputLabel:<span className={styles.error}> ошибка: пустое поле </span>});
   }
 };
-
   render() {
 
     return (

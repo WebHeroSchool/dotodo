@@ -5,8 +5,8 @@ import InputItem from '../InputItem/InputItem';
 import styles from './Todo.module.css';
 import PropTypes from 'prop-types';
 
-const Todo = () => {
-  const initialState = {
+class Todo extends React.Component {
+  state = {
     items: [
       {
         value: 'открыть холодильник',
@@ -28,12 +28,43 @@ const Todo = () => {
         isDone: false,
         index: 3,
       },
-    ]
+    ],
   };
-  
-  const [items, setItems] = useState(initialState.items);
+
+  filter(items, filter) {
+   switch(filter) {
+    case 'all':
+      return items;
+    case 'active':
+      return items.filter((item) => !item.isDone);
+    case 'done':
+      return items.filter((item) => item.isDone);           
+    default:
+    return items;
+   }
+}
+
+  render () {
+    const {state} = this.props
+    const { items, filter } = this.state;
+    const visibleItems = this.filter(items, filter);
+
+    const onClickFilter = (filter) => {
+      this.setState({ filter });
+    };
+
+    const onClickDelete = index => {
+      this.setState({ items: this.state.items.filter(item => item.index !== index) });
+      this.state.items.forEach(item => {
+
+        if (item.index > index) {
+          item.index--;
+        }
+      });
+    };
+
   const onClickDone = index => {
-    const newItemList = items.map(item => {
+    const newItemList = this.state.items.map(item => {
       const newItem = {...item};
 
       if (item.index === index) {
@@ -42,18 +73,7 @@ const Todo = () => {
 
       return newItem;
     });
-
-    setItems(newItemList);
-  };
-
-  const onClickDelete = index => {
-    setItems(item => (items.filter(item => item.index !== index)));
-    items.forEach(item => {
-
-      if (item.index > index) {
-        item.index--;
-      }
-    });
+    this.setState({  items: newItemList });
   };
 
   const onClickAdd = value => {
@@ -61,41 +81,39 @@ const Todo = () => {
     if (value.length > 30) {
       value = value.slice(0,30) + '...';
     }
-
-    setItems(items => ([
-        ...items,
+    this.setState(state => ({
+        items:[
+        ...this.state.items,
         {
           value,
           isDone: false,
-          index: items.length,
+          index: this.state.items.length,
         }
       ]
-    ));
+    }));
   };
 
-  const selectedDelete = () => {
+   const selectedDelete = () => {
     let count = 0;
-    items.forEach(item => {
+    this.state.items.forEach(item => {
       
       if (item.isDone === true) {
         count = count + 1;
       }
       item.index = item.index - count ;
     });
-    setItems(items => (items.filter(item => item.isDone !== true)));
+    this.setState({ items: this.state.items.filter(item => item.isDone !== true) });
+    console.log(this.state.items)
   };
-
-  const onClickFilter = () => {
-  };
-
+  
   return (
     <div className={styles.wrap}>
       <h1 className={styles.title}>
         Список дел:
       </h1>
-      <InputItem onClickAdd={onClickAdd} />
+      <InputItem onClickAdd={onClickAdd} todoItem={this.state.items} />
       <ItemList
-        todoItem={items}
+        todoItem={visibleItems}
         onClickDone={onClickDone}
         onClickDelete={onClickDelete} 
       />
@@ -104,9 +122,10 @@ const Todo = () => {
         selectedDelete={selectedDelete}
         count={items.filter(item => item.isDone === false).length} 
         countAll={items.length}
-        /> 
+      /> 
     </div>
   );
+  }
 };
 
 export default Todo;
