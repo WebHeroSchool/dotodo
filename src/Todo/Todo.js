@@ -36,20 +36,20 @@ class Todo extends React.Component {
     case 'all':
       return items;
     case 'active':
-      return items.filter((item) => !item.isDone);
+      return items.filter( item => !item.isDone);
     case 'done':
-      return items.filter((item) => item.isDone);           
+      return items.filter( item => item.isDone);           
     default:
     return items;
    }
 }
 
   render () {
-    const {state} = this.props
+    const {state} = this.props;
     const { items, filter } = this.state;
     const visibleItems = this.filter(items, filter);
 
-    const onClickFilter = (filter) => {
+    const onClickFilter = filter => {
       this.setState({ filter });
     };
 
@@ -103,7 +103,6 @@ class Todo extends React.Component {
       item.index = item.index - count ;
     });
     this.setState({ items: this.state.items.filter(item => item.isDone !== true) });
-    console.log(this.state.items)
   };
   
   return (
