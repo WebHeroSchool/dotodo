@@ -72,11 +72,31 @@ class About extends React.Component {
               Мои репозитрии:
               <ol className={styles.repo_list}>
                 {repoList.map( (repo) => (
-                <li key={repo.id}>
+                <li 
+                  key={repo.id}
+                  className={styles.item}
+                >
                   <a
                   className={styles.link}
-                  href={repo.html_url}>
+                  href={repo.html_url}
+                  >
                     {repo.name}
+                    <span className={styles.update}>
+                      {new Date(repo.updated_at).toLocaleString('ru',
+                        {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric',
+                        })
+                      }
+                    </span>
+                    
+                  
+                  </a>
+                  <a 
+                    href={`https://${info.login}.github.io/${repo.name}/`}
+                    className={styles.gitpages}
+                  >
                   </a>
                 </li>))}
               </ol>

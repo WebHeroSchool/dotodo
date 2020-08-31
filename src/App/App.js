@@ -7,30 +7,6 @@ import styles from './App.module.css';
 import '../fonts/fonts.css';
 
 const App = () => {
-  const state = {
-    items: [
-      {
-        value: 'открыть холодильник',
-        isDone: true,
-        index: 0,
-      }, 
-      {
-        value: 'вытащить слона',
-        isDone: false,
-        index: 1,
-      }, 
-      {
-        value: 'положить оленя',
-        isDone: false,
-        index: 2,
-      }, 
-      {
-        value: 'закрыть холодильник',
-        isDone: false,
-        index: 3,
-      },
-    ],
-  };
 
   return (
     <Router>
@@ -44,6 +20,11 @@ const App = () => {
           <Route path='/' exact component={About} />
           <Route path='/todo' component={Todo} />
           <Route path='/contacts' component={Contacts} />
+        </div>
+        <div className={styles.promo}>
+          Выполнено в
+          <img src="/img/promo.png" alt="Web Hero School">
+          </img>
         </div>
       </div>
       </Router>

@@ -5,19 +5,28 @@ import styles from './InputItem.module.css';
 import PropTypes from 'prop-types';
 
 class InputItem extends React.Component {
-  
   state = {
     inputValue: '',
-    inputLabel: 'Новая задача'
+    inputLabel: 'Новая задача',
   };
 
  onButtonClick = () => {
 
-  if (this.state.inputValue !=='') {
-    this.setState({ inputValue: ''});
-    this.props.onClickAdd(this.state.inputValue.toLowerCase());
-  } else {
+  if (this.state.inputValue ==='') {
     this.setState({inputLabel:<span className={styles.error}> ошибка: пустое поле </span>});
+  } else {
+
+    if (this.state.inputValue.length > 30) {
+      this.setState({inputLabel:<span className={styles.error}>максимум 30 символов</span>,inputValue:''});
+    } else {
+
+      if (this.props.todoItem.some(i => i.value === this.state.inputValue.toLowerCase())) {
+        this.setState({inputLabel:<span className={styles.error}>задача уже создана</span>,inputValue:''});
+      } else {
+        this.setState({ inputValue: ''});
+        this.props.onClickAdd(this.state.inputValue.toLowerCase());
+      }
+    }
   }
 };
   render() {

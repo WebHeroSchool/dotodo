@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
 import styles from './Todo.module.css';
 import PropTypes from 'prop-types';
-
+// localStorage.clear()
 class Todo extends React.Component {
   state = {
-    items: [
+    items: JSON.parse(localStorage.getItem('items')) || [
       {
         value: 'открыть холодильник',
         isDone: true,
@@ -43,9 +43,8 @@ class Todo extends React.Component {
     return items;
    }
 }
-
+ 
   render () {
-    const {state} = this.props;
     const { items, filter } = this.state;
     const visibleItems = this.filter(items, filter);
 
@@ -54,57 +53,60 @@ class Todo extends React.Component {
     };
 
     const onClickDelete = index => {
-      this.setState({ items: this.state.items.filter(item => item.index !== index) });
-      this.state.items.forEach(item => {
+      const newItemList = this.state.items.filter(item => item.index !== index);
+      newItemList.forEach(item => {
 
         if (item.index > index) {
           item.index--;
         }
       });
+      this.setState({items: [...newItemList]})
+      localStorage.setItem('items', JSON.stringify(newItemList))
     };
 
-  const onClickDone = index => {
-    const newItemList = this.state.items.map(item => {
-      const newItem = {...item};
+    const onClickDone = index => {
+      const newItemList = this.state.items.map(item => {
+        const newItem = {...item};
 
-      if (item.index === index) {
-        newItem.isDone = !item.isDone;
-      }
+        if (item.index === index) {
+          newItem.isDone = !item.isDone;
+        }
 
-      return newItem;
-    });
-    this.setState({  items: newItemList });
-  };
+        return newItem;
+      });
+      localStorage.setItem('items', JSON.stringify(newItemList))
+      this.setState({items: JSON.parse(localStorage.getItem('items'))})
+    };
 
-  const onClickAdd = value => {
-
-    if (value.length > 30) {
-      value = value.slice(0,30) + '...';
-    }
-    this.setState(state => ({
-        items:[
-        ...this.state.items,
+    const onClickAdd = value => {
+      const newItemList = [
+        ...items,
         {
           value,
           isDone: false,
           index: this.state.items.length,
         }
-      ]
-    }));
-  };
+      ];
 
-   const selectedDelete = () => {
-    let count = 0;
-    this.state.items.forEach(item => {
-      
-      if (item.isDone === true) {
-        count = count + 1;
-      }
-      item.index = item.index - count ;
-    });
-    this.setState({ items: this.state.items.filter(item => item.isDone !== true) });
-  };
-  
+      localStorage.setItem('items', JSON.stringify(newItemList));
+      this.setState(state => ({
+        items:[...newItemList]
+      }))};
+
+    const selectedDelete = () => {
+      const newItemList = [...this.state.items];
+        let count = 0;
+        newItemList.forEach(item => {
+
+          if (item.isDone === true) {
+            count++;
+          }
+          item.index-=count;
+      });
+        localStorage.setItem('items', JSON.stringify(newItemList.filter(item => item.isDone !== true)));
+        this.setState({items: JSON.parse(localStorage.getItem('items'))})
+    };
+
   return (
     <div className={styles.wrap}>
       <h1 className={styles.title}>
@@ -119,12 +121,12 @@ class Todo extends React.Component {
       <Footer
         onClickFilter={onClickFilter}
         selectedDelete={selectedDelete}
-        count={items.filter(item => item.isDone === false).length} 
+        count={items.filter(item => item.isDone === false).length}
         countAll={items.length}
+        countDone={items.filter(i => i.isDone === true).length}
       /> 
     </div>
-  );
-  }
+  )};
 };
 
 export default Todo;
