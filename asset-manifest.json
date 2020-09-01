@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.6ff3be08.chunk.css",
+    "main.js": "/react-gh-pages/static/js/main.1af4b81f.chunk.js",
+    "main.js.map": "/react-gh-pages/static/js/main.1af4b81f.chunk.js.map",
+    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.3d3ec97d.js",
+    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.3d3ec97d.js.map",
+    "static/js/2.2e861e8c.chunk.js": "/react-gh-pages/static/js/2.2e861e8c.chunk.js",
+    "static/js/2.2e861e8c.chunk.js.map": "/react-gh-pages/static/js/2.2e861e8c.chunk.js.map",
+    "index.html": "/react-gh-pages/index.html",
+    "precache-manifest.2a4b67bfa5b51ff7bc49e9f5d5f11bca.js": "/react-gh-pages/precache-manifest.2a4b67bfa5b51ff7bc49e9f5d5f11bca.js",
+    "service-worker.js": "/react-gh-pages/service-worker.js",
+    "static/css/main.6ff3be08.chunk.css.map": "/react-gh-pages/static/css/main.6ff3be08.chunk.css.map",
+    "static/js/2.2e861e8c.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.2e861e8c.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "/react-gh-pages/static/media/Montserrat-Regular.92db9a07.otf",
+    "static/media/ItemList.module.css": "/react-gh-pages/static/media/delete.261dd5d8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3d3ec97d.js",
+    "static/js/2.2e861e8c.chunk.js",
+    "static/css/main.6ff3be08.chunk.css",
+    "static/js/main.1af4b81f.chunk.js"
+  ]
+}
