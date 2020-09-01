@@ -74,7 +74,7 @@ class Todo extends React.Component {
 
         return newItem;
       });
-      localStorage.setItem('items', JSON.stringify(newItemList))
+      localStorage.setItem('items', JSON.stringify(newItemList));
       this.setState({items: JSON.parse(localStorage.getItem('items'))});
     };
 
@@ -104,7 +104,7 @@ class Todo extends React.Component {
           item.index-=count;
       });
         localStorage.setItem('items', JSON.stringify(newItemList.filter(item => item.isDone !== true)));
-        this.setState({items: JSON.parse(localStorage.getItem('items'))})
+        this.setState({items: JSON.parse(localStorage.getItem('items'))});
     };
 
   return (

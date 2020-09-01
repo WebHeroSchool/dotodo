@@ -98,9 +98,9 @@ a {
   }
 
   .menu > a {
-  border: 3px solid #3f51b5;
-  border-radius: 15px;
-  margin-right: 5px;
+    border: 3px solid #3f51b5;
+    border-radius: 15px;
+    margin-right: 5px;
   }
 
   .menu > a:focus,
