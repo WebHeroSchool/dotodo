@@ -60,8 +60,8 @@ class Todo extends React.Component {
           item.index--;
         }
       });
-      this.setState({items: [...newItemList]})
-      localStorage.setItem('items', JSON.stringify(newItemList))
+      this.setState({items: [...newItemList]});
+      localStorage.setItem('items', JSON.stringify(newItemList));
     };
 
     const onClickDone = index => {
@@ -75,7 +75,7 @@ class Todo extends React.Component {
         return newItem;
       });
       localStorage.setItem('items', JSON.stringify(newItemList))
-      this.setState({items: JSON.parse(localStorage.getItem('items'))})
+      this.setState({items: JSON.parse(localStorage.getItem('items'))});
     };
 
     const onClickAdd = value => {
@@ -91,7 +91,7 @@ class Todo extends React.Component {
       localStorage.setItem('items', JSON.stringify(newItemList));
       this.setState(state => ({
         items:[...newItemList]
-      }))};
+      }));};
 
     const selectedDelete = () => {
       const newItemList = [...this.state.items];
@@ -126,7 +126,7 @@ class Todo extends React.Component {
         countDone={items.filter(i => i.isDone === true).length}
       /> 
     </div>
-  )};
+  );}
 };
 
 export default Todo;

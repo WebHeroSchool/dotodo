@@ -70,14 +70,12 @@ a {
 }
 
 @media (max-width: 1024px) {
-
   .promo {
     display: none;
   }
 }
 
 @media (max-width: 610px) {
-
   .wraper {
     flex-direction: column;
   }
@@ -99,27 +97,28 @@ a {
     margin-bottom: 0;
   }
 
+  .menu > a {
+  border: 3px solid #3f51b5;
+  border-radius: 15px;
+  margin-right: 5px;
+  }
+
   .menu > a:focus,
   .menu > a:hover,
   .menu > a:active {
     border: transparent;
   }
-
-  .menu > a {
-    border: 3px solid #3f51b5;
-    border-radius: 15px;
-    margin-right: 5px;
-  }
 }
 
 @media (max-width: 430px) {
-
   .menu {
     width: 100%;
   }
+
   .item {
     font-size: 1em;
   }
+
   .content {
     width: 100%;
   }

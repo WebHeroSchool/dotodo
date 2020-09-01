@@ -35,7 +35,7 @@ header {
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .about {

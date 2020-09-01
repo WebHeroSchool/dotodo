@@ -53,7 +53,7 @@ const Contacts = () => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Contacts;
