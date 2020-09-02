@@ -1,6 +1,4 @@
 {
-  "homepage": "http://tytytyw.github.io/dotodo",
-  "name": "dotodo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
