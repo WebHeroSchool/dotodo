@@ -5,7 +5,7 @@ import About from '../About/About.js';
 import Contacts from '../Contacts/Contacts.js';
 import styles from './App.module.css';
 import promo from './img/promo.png';
-import '../fonts/fonts.css';
+import '../../fonts/fonts.css';
 
 const App = () => {
 

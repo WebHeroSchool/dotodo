@@ -7,8 +7,6 @@ import linkedin from './img/in.png';
 import email from './img/mail.png';
 import vk from './img/vk.png';
 
-
-
 const Contacts = () => {
   const age = Math.floor((new Date() - new Date(1989, 9, 11)) / 1000 / 60 / 60 / 24 / 365);
 
