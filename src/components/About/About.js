@@ -1,8 +1,8 @@
-import React from "react";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import styles from "./About.module.css";
+import React from 'react';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import styles from './About.module.css';
 import classnames from 'classnames';
-import { Octokit } from "@octokit/rest";
+import { Octokit } from '@octokit/rest';
 import Pagination from '@material-ui/lab/Pagination';
 
 const octokit = new Octokit();
@@ -11,7 +11,7 @@ class About extends React.Component {
   state = {
     isLoading: true,
     isError: false,
-    error: "",
+    error: '',
     repoList: [],
     info: [],
     currentPage: 1,
@@ -22,13 +22,13 @@ class About extends React.Component {
     this.requestRepolist(this.state.maxReposInPage, this.state.currentPage);
 
     octokit.users.getByUsername({
-      username: "tytytyw"
+      username: 'tytytyw'
         }).then(({ data }) => {
           this.setState({
             info: data,
         });
     })
-    .catch( (error) => {
+    .catch( error => {
       this.setState({
         bioIsLoading: false,
         isError: true,
@@ -40,7 +40,7 @@ class About extends React.Component {
   requestRepolist = (maxReposInPage, selectedPage) => {
   octokit.repos.listForUser({
     username: 'tytytyw',
-    per_page: maxReposInPage,
+    perPage: maxReposInPage,
     page: selectedPage
   }).then(
     successResponse => {
@@ -91,7 +91,7 @@ class About extends React.Component {
             <div className={styles.title}>
               Мои репозитрии:
               <ol className={styles.repo_list}>
-                {repoList.map( (repo) => (
+                {repoList.map( repo => (
                 <li 
                   key={repo.id}
                   className={styles.item}
