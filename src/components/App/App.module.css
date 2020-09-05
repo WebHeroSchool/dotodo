@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   min-width: 320px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -17,7 +18,6 @@ a {
 .content {
   width: 400px;
   min-height: 660px;
-  font-family: 'Montserrat', sans-serif;
   background-color: #f7f7f7;
   padding: 10px;
   border-radius: 10px;

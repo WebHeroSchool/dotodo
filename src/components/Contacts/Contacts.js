@@ -28,32 +28,50 @@ const Contacts = () => {
       </header>
       <div className={styles.links}>
         <div className={styles.links__item}>
-          <a href="https://vk.com/tytytyw">
+          <a
+            target="_blank"
+            href="https://vk.com/tytytyw"
+          >
             <img src={vk} alt="VK"></img>
           </a>
         </div>
         <div className={styles.links__item}>
-          <a href="https://instagram.com/tytytyw">
+          <a
+            target="_blank"
+            href="https://instagram.com/tytytyw"
+          >
             <img src={instagram} alt="instagram"></img>
           </a>
         </div>
         <div className={styles.links__item}>
-          <a href="https://github.com/tytytyw">
+          <a
+            target="_blank"
+            href="https://github.com/tytytyw"
+          >
             <img src={github} alt="github"></img>
           </a>
         </div>
         <div className={styles.links__item}>
-          <a href="https://t.me/tytytyw">
+          <a
+           target="_blank"
+            href="https://t.me/tytytyw"
+          >
             <img src={telegram} alt="telegram"></img>
           </a>
         </div>
         <div className={styles.links__item}>
-          <a href="https://www.linkedin.com/in/tytytyw/">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/tytytyw/"
+          >
             <img src={linkedin} alt="in"></img>
           </a>
         </div>
         <div className={styles.links__item}>
-          <a href="mailto:nonameFOX@yandex.ru">
+          <a
+            target="_blank"
+            href="mailto:nonameFOX@yandex.ru"
+          >
             <img src={email} alt="email"></img>
           </a>
         </div>

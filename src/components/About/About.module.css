@@ -3,6 +3,16 @@
   color: #3f51b5;
 }
 
+.title {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px solid #3f51b5;
+  border-radius: 5px;
+  margin-bottom: 6px;
+}
+
 ol {
   margin: 0;
 }
@@ -24,39 +34,13 @@ ol {
   display: flex;
   justify-content: center;
   background-color: #3f51b5;
-  border-radius: 5px;
   padding: 6px 16px;
   color: #fff;
   width: 70%;
-  margin: 10px auto;
+  margin: 0 auto;
   text-align: center;
   transition: all .3s ease;
   position: relative;
-}
-
-.gitpages {
-  display: inline;
-  width: 35px;
-  height: 100%;
-  position: absolute;
-  right: 10px;
-  top: 0;
-  background-image: url('./img/gitpages.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-  transform: scale(.8);
-  transition: all ease .2s;
-}
-
-.gitpages:hover {
-  transform: scale(.66);
-  background-color: #47549e;
-}
-
-.gitpages:active {
-  transform: scale(.9);
 }
 
 .link:hover {
@@ -75,6 +59,7 @@ ol {
 
 .item {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .update {
@@ -82,6 +67,102 @@ ol {
   position: absolute;
   right: 10px;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination > ul > li > button {
+  color: #3f51b5;
+}
+
+.repos_descr {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  color: #3f51b5;
+  font-size: 14px;
+  transition: all .4s ease;
+  padding: 0 16px;
+  font-style: italic;
+  position: relative;
+}
+
+.repos_descr:hover {
+  background-color: #3f51b5;
+  color: #fff;
+  border-top: 1px solid darkblue;
+  font-size: 14px;
+  padding: 6px 16px;
+  font-style: normal;
+}
+
+.repos_descr:active {
+  transition: none;
+  color: #3f51b5;
+  background-color: #fff;
+}
+
+.repos_descr::before {
+  content: "description:";
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+.repos_descr:hover.repos_descr::before {
+  content: "github pages:";
+  font-size: 10px;
+  top: 4px;
+}
+
+.repos_descr:hover.repos_descr::after {
+  position: absolute;
+  content: '';
+  background-image: url(img/gitpages.png);
+  background-size: contain;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  right: 10px;
+}
+
+.css_language,
+.html_language,
+.js_language {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+.css_language {
+  background-color: #563d7c;
+}
+
+.html_language {
+  background-color: #e34c26;
+}
+
+.js_language {
+  background-color: #f1e05a;
+}
+
+.repo_lang {
+  font-size: 8px;
+  position: absolute;
+  bottom: 1px;
+  right: 3px;
+  display: flex;
+  align-items: center;
+  color:  #fff;
+}
+
 
 @media (max-width: 430px) {
   .bio > img {
@@ -96,9 +177,5 @@ ol {
 
   .update {
     font-size: 8px;
-  }
-
-  .gitpages {
-    right: 0;
   }
 }

@@ -1,7 +1,9 @@
 import React from "react";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import styles from "./About.module.css";
+import classnames from 'classnames';
 import { Octokit } from "@octokit/rest";
+import Pagination from '@material-ui/lab/Pagination';
 
 const octokit = new Octokit();
 
@@ -11,27 +13,15 @@ class About extends React.Component {
     isError: false,
     error: "",
     repoList: [],
-    info: []
+    info: [],
+    currentPage: 1,
+    maxReposInPage: 2
   }
 
   componentDidMount() {
-    octokit.repos.listForUser({
-      username: "tytytyw"
-    }).then(({ data }) => {
-      this.setState({
-        repoList: data,
-        isLoading: false
-      });
-    })
-    .catch( (error) => {
-      this.setState({
-        isLoading: false,
-        isError: true,
-        error: error.message
-      });
-    });
+    this.requestRepolist(this.state.maxReposInPage, this.state.currentPage);
 
-   octokit.users.getByUsername({
+    octokit.users.getByUsername({
       username: "tytytyw"
         }).then(({ data }) => {
           this.setState({
@@ -47,8 +37,34 @@ class About extends React.Component {
     });
   }
 
+  requestRepolist = (maxReposInPage, selectedPage) => {
+  octokit.repos.listForUser({
+    username: 'tytytyw',
+    per_page: maxReposInPage,
+    page: selectedPage
+  }).then(
+    successResponse => {
+      this.setState({
+        repoList: successResponse.data,
+        fetchReposFailure: false,
+        isLoading: false,
+        currentPage: selectedPage
+      }); 
+    }).catch(error => {
+      this.setState({
+        fetchReposFailure: true,
+        isLoading: false,
+        currentPage: selectedPage
+      });
+  });
+  }
+
   render() {
-    const { isLoading, isError, error, repoList, info } = this.state;
+    const { isLoading, isError, error, repoList, info, currentPage, maxReposInPage  } = this.state;
+    const switchPage = (event, page) => {
+      this.requestRepolist(maxReposInPage, page);
+    };
+
     return (
       isLoading ? <CircularProgress /> :
         <div className={styles.wrap}>
@@ -60,7 +76,11 @@ class About extends React.Component {
                 <div>
                   name: {info.name}
                 </div>
-                <a className={styles.link} href={info.html_url}>
+                <a
+                  className={styles.link}
+                  href={info.html_url}
+                  target="_blank"
+                >
                     GitHub: {info.login}
                 </a>
               </h4>
@@ -72,15 +92,31 @@ class About extends React.Component {
               Мои репозитрии:
               <ol className={styles.repo_list}>
                 {repoList.map( (repo) => (
+
                 <li 
                   key={repo.id}
                   className={styles.item}
                 >
+
                   <a
+                  target="_blank"
                   className={styles.link}
                   href={repo.html_url}
                   >
+                    <span className={styles.repo_lang}>
+                      <span className={classnames({
+                        [styles.language]: true,
+                        [styles.html_language]: repo.language === 'HTML',
+                        [styles.css_language]: repo.language === 'CSS',
+                        [styles.js_language]: repo.language === 'JavaScript',
+                        })}>
+                      </span>
+
+                      {repo.language}
+
+                    </span>
                     {repo.name}
+
                     <span className={styles.update}>
                       {new Date(repo.updated_at).toLocaleString('ru',
                         {
@@ -90,14 +126,16 @@ class About extends React.Component {
                         })
                       }
                     </span>
-                    
-                  
                   </a>
-                  <a 
+
+                  <a
+                    target="_blank"
                     href={`https://${info.login}.github.io/${repo.name}/`}
-                    className={styles.gitpages}
+                    className={styles.repos_descr}
                   >
-                  </a>
+                    {(repo.description.length > 25) ? repo.description.slice(0,25)+'...' : repo.description}
+                  </a> 
+
                 </li>))}
               </ol>
             </div>
@@ -109,7 +147,15 @@ class About extends React.Component {
             </div>
           }
 
+      <Pagination
+        className={styles.pagination}
+        onChange={switchPage}
+        page={currentPage}
+        count={Math.ceil(info.public_repos / maxReposInPage)}
+        shape="rounded"
+      />
       </div>
+
     );
   }
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import Item from '../Item/Item';
-import deleteIco from './img/delete.svg';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import styles from './ItemList.module.css';
