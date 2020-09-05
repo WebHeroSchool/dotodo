@@ -92,12 +92,10 @@ class About extends React.Component {
               Мои репозитрии:
               <ol className={styles.repo_list}>
                 {repoList.map( (repo) => (
-
                 <li 
                   key={repo.id}
                   className={styles.item}
                 >
-
                   <a
                   target="_blank"
                   className={styles.link}

@@ -35,6 +35,7 @@ const Contacts = () => {
             <img src={vk} alt="VK"></img>
           </a>
         </div>
+
         <div className={styles.links__item}>
           <a
             target="_blank"
@@ -43,6 +44,7 @@ const Contacts = () => {
             <img src={instagram} alt="instagram"></img>
           </a>
         </div>
+
         <div className={styles.links__item}>
           <a
             target="_blank"
@@ -51,6 +53,7 @@ const Contacts = () => {
             <img src={github} alt="github"></img>
           </a>
         </div>
+
         <div className={styles.links__item}>
           <a
            target="_blank"
@@ -59,6 +62,7 @@ const Contacts = () => {
             <img src={telegram} alt="telegram"></img>
           </a>
         </div>
+
         <div className={styles.links__item}>
           <a
             target="_blank"
@@ -67,6 +71,7 @@ const Contacts = () => {
             <img src={linkedin} alt="in"></img>
           </a>
         </div>
+        
         <div className={styles.links__item}>
           <a
             target="_blank"

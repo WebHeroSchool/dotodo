@@ -110,7 +110,6 @@ ol {
   position: absolute;
   left: 0;
   top: 0;
-
 }
 
 .repos_descr:hover.repos_descr::before {
@@ -160,9 +159,8 @@ ol {
   right: 3px;
   display: flex;
   align-items: center;
-  color:  #fff;
+  color: #fff;
 }
-
 
 @media (max-width: 430px) {
   .bio > img {
