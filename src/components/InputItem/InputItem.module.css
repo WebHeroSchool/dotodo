@@ -13,6 +13,7 @@
 
 .add_task {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .add_task::before {

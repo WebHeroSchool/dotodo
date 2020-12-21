@@ -7,7 +7,7 @@
 }
 
 button.delete {
-  background: url(../img/delete.svg);
+  background: url('./img/delete.svg');
   background-repeat: no-repeat;
   background-size: contain;
   opacity: .3;
